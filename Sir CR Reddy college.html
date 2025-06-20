@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="sectionHome">
+        <div class="bg-container">
+            <div class="active-1">
+                <h1 class="text">SIR C.R.REDDY COLLEGE OF ENGINEERING, ELURU</h1>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVcA_t-_QjUlS3uFwT3Cqg-485lsmUA-TTIWyu30U_AarWm-SKmFSC0MMJ&s=10" class="active" />
+                <h2 class="text-2">DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</h2>
+                <h3 class="text-1">Content :- This Static Website shows the present scenario of Sir CR Reddy College of Engineering </h3>
+                <button class="active-2" onclick="display('sectionContent-card')">Get Started</button>
+            </div>
+        </div>
+    </div>
+    <div id="sectionContent-card">
+        <div class="bg-container-1">
+            <h1 class="heading">Welcome to Sir. C. R. Reddy College of Engineering</h1>
+
+            <div class="card-container d-flex flex-row" onclick="display('sectionCollege')">
+                <div>
+                    <h1 class="card-heading">About the College</h1>
+                    <p class="card-description">
+                        Sir C.R.Reddy College of Engineering is the first Engineering College in Andhra Pradesh sanctioned and recognized by All India Council for Technical Education (AICTE).
+                    </p>
+                </div>
+                <img src="https://sircrrengg.ac.in/images/crr/2.college.jpg" class="card-image" />
+            </div>
+
+            <div class="card-container d-flex flex-row" onclick="display('sectionCSE')">
+                <div>
+                    <h1 class="card-heading">Departement of CSE</h1>
+                    <p class="card-description">
+                        The Department of Computer Science & Engineering was established in the year 1989 along with the inception of college.
+                    </p>
+                </div>
+                <img src="data:image/png;base64,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" class="card-image" />
+            </div>
+
+            <div class="card-container d-flex flex-row" onclick="display('sectionLaboratoties')">
+                <div>
+                    <h1 class="card-heading">About Laboratoties </h1>
+                    <p class="card-description">
+                        College has excellent laboratory infrastructural facilities and the students can get first-hand experience as they are trained in laboratories to enhance their practical skills.
+
+                    </p>
+                </div>
+                <img src="data:image/jpeg;base64,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" class="card-image" />
+            </div>
+
+            <div class="card-container d-flex flex-row" onclick="display('sectionLibrary')">
+                <div>
+                    <h1 class="card-heading">About Central Library</h1>
+                    <p class="card-description">
+                        The Central Library is the significant feature of the college.
+                        It is constructed in the campus with a total built up area of 3,717 square meters at the cost of Rs 3 crores with all modern facilities.
+                    </p>
+                </div>
+                <img src="https://sircrrengg.ac.in/images/SS.jpg" class="card-image" />
+            </div>
+            <div class="card-container d-flex flex-row" onclick="display('sectionPlacements')">
+                <div>
+                    <h1 class="card-heading">About placements</h1>
+                    <p class="card-description">
+                        The Training & Placement Department was established with the aim of creating career opportunities in reputed corporates for meeting aspirations of all the stakeholders.
+
+
+
+                    </p>
+                </div>
+                <img src="https://img.freepik.com/free-vector/employment-recruitment-isometric-template_1284-26081.jpg?size=626&ext=jpg&ga=GA1.1.2077902684.1701573360&semt=sph" class="card-image" />
+            </div>
+
+            <div class="card-container d-flex flex-row" onclick="display('sectionHostel')">
+                <div>
+                    <h1 class="card-heading">About Hostel</h1>
+                    <p class="card-description">
+                        Both hostels have necessary infrastructure for boarding and lodging facilities provided to the inmates. The kitchen is equipped with modern gadgets/utensils and run either on steam and/or on conventional cooking.
+                    </p>
+                </div>
+                <img src="https://sircrrengg.ac.in/images/IMG_0744.jpg" class="card-image" />
+            </div>
+            <div class="card-container d-flex flex-row" onclick="display('sectionFacilities')">
+                <div>
+                    <h1 class="card-heading">Facilities</h1>
+                    <p class="card-description">
+                        To arrange lectures, seminars, debates, workshops, Transport & Parking, Gymnasium, Ourdoor Sports Facilities,
+                        Health Care Centre, Canteen, Bank, and such as other.
+
+                    </p>
+                </div>
+                <img src="data:image/jpeg;base64,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" class="card-image" />
+            </div>
+            <button class="btn btn-secondary" onclick="display('sectionHome')">Go to HomePage</button>
+        </div>
+    </div>
+
+    <div id="sectionstaff">
+        <div class="d-flex flex-column justify-content-center ml-4">
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710774080/ls5nkpoicotexqe3nb0i.jpg" class="card-image"> <br />
+                    <h6>Dr.ADIMULAM YESU BABU</h6>
+                    <h6>PROFESSOR & HOD</h6>
+                    <h6>M.Tech.,ph.D</h6>
+                </div>
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710776286/i8cjsbhwhxlv6nn19lqk.jpg" class="card-image"> <br />
+                    <h6>Dr.S.Krishna Rao</h6>
+                    <h6>PROFESSOR</h6>
+                    <h6>M.Tech.,ph.D</h6>
+                </div>
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710776382/WhatsApp_Image_2024-03-18_at_9.04.05_PM_gbbagy.jpg" class="card-image"> <br />
+                    <h6>Dr.Marlapalli Krishna</h6>
+                    <h6>PROFESSOR</h6>
+                    <h6>M.Tech.,ph.D</h6>
+                </div>
+            </div>
+
+
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710776381/WhatsApp_Image_2024-03-18_at_9.04.05_PM_1_ytieao.jpg" class="card-image"> <br />
+                    <h6>J.S.V.GOPALA KRISHNA</h6>
+                    <h6>ASSOCIATE PROFESSOR</h6>
+                    <h6>M.Tech</h6>
+                </div>
+
+
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710776381/WhatsApp_Image_2024-03-18_at_9.04.28_PM_obdfak.jpg" class="card-image"> <br />
+                    <h9>Dr.GADI.NIRMALA</h9> <br />
+                    <h9>ASSOCIATE PROFESSOR</h9>
+                    <h6>M.Tech.,ph.D</h6>
+                </div>
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710776381/WhatsApp_Image_2024-03-18_at_9.05.36_PM_j9mwcd.jpg" class="card-image"> <br />
+                    <h9>Dr.DEEPAK NEDUNURI</h9> <br />
+                    <h9>ASSOCIATE PROFESSOR</h9>
+                    <h6>M.Tech.,ph.D</h6>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710776381/WhatsApp_Image_2024-03-18_at_9.06.05_PM_cifx5d.jpg" class="card-image"> <br />
+                    <h9>SURYADEVARA MOHAN BABU CHOWDARY </h9> <br />
+                    <h9>SENIOR ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710776381/WhatsApp_Image_2024-03-18_at_9.06.37_PM_t2yaiq.jpg" class="card-image"> <br />
+                    <h9>KONDA SREENU</h9> <br />
+                    <h9>SENIOR ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech.,ph.D</h6>
+                </div>
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710776380/WhatsApp_Image_2024-03-18_at_9.07.08_PM_yjkgxp.jpg" class="card-image"> <br />
+                    <h9>Dr.NAGA MADHAVI LATHA KAKARLA</h9> <br />
+                    <h9>ASSOCIATE PROFESSOR</h9>
+                    <h6>M.Tech.,ph.D</h6>
+                </div>
+            </div>
+
+
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710776379/WhatsApp_Image_2024-03-18_at_9.07.32_PM_v82qtt.jpg" class="card-image"> <br />
+                    <h9>K.CHAITANYA DEEPTHI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710778813/WhatsApp_Image_2024-03-18_at_9.42.59_PM_dor4rt.jpg" class="card-image"> <br />
+                    <h9>Y LEELA SANDHYA RANI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710778814/WhatsApp_Image_2024-03-18_at_9.42.59_PM_1_npw0cz.jpg" class="card-image"> <br />
+                    <h9>M.GANESH BABU</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710778814/WhatsApp_Image_2024-03-18_at_9.43.01_PM_grrylz.jpg" class="card-image"> <br />
+                    <h9>GUNUPUSALA SATYANARAYANA</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710778812/WhatsApp_Image_2024-03-18_at_9.45.02_PM_dsny24.jpg" class="card-image"> <br />
+                    <h9>RAMA DEVI CH</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710778811/WhatsApp_Image_2024-03-18_at_9.45.21_PM_yikwlj.jpg" class="card-image"> <br />
+                    <h9>HOMER BENNY BANDELA</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1710778811/WhatsApp_Image_2024-03-18_at_9.45.52_PM_afwvyv.jpg" class="card-image"> <br />
+                    <h9>SAMPARTHI V S KUMAR</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+
+
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028347/swfgvk3mqxabboa7tqoi.jpg" class="card-image"> <br />
+                    <h9>NAGA DEEPTHI PONNAGANTI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech.,ph.D</h6>
+                </div>
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028375/uqvw0fugvnefskqafty2.jpg" class="card-image"> <br />
+                    <h9>Dr.B.MADHAV RAO</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech.,ph.D</h6>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028378/mhknpfa6trsrywrlafux.jpg" class="card-image"> <br />
+                    <h9>V SHARIFF</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028380/bcztldiqmaynpizw3ngu.jpg" class="card-image"> <br />
+                    <h9>VALLABHANENI PRANAV</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028377/l05n2atkzt7do4wzioic.jpg" class="card-image"> <br />
+                    <h9>K SWATHI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711037343/WhatsApp_Image_2024-03-21_at_9.22.44_PM_i7ts6e.jpg" class="card-image"> <br />
+                    <h9>BOKINALA CHIRANJEEVI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711037342/WhatsApp_Image_2024-03-21_at_9.21.48_PM_tgxt88.jpg" class="card-image"> <br />
+                    <h9>KONAKALLA PAVATHRI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028372/y7tm86ik4d4cent0b4ea.jpg" class="card-image"> <br />
+                    <h9>GANJI DAMODAR</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028368/lxzmwnl1dq7nd0st2cfh.jpg" class="card-image"> <br />
+                    <h9>KETENENI LAKSHMI PRASUNA</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028370/cbem4e0uoulopi4npsrw.jpg" class="card-image"> <br />
+                    <h9>RAMYAKRISHNA KADIYALA</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028372/fzn15itbn4lap0elfgs4.jpg" class="card-image"> <br />
+                    <h9>SATHE EKAMBAREESH MANDAVALLI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028372/zlkccmqqkociwnxvlbm0.jpg" class="card-image"> <br />
+                    <h9>BUDDAVARAPRASAD KANTIPUDI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028372/qxkas8g4eyrw6hssn77g.jpg" class="card-image"> <br />
+                    <h9>MAMATHA ALLAPARTHI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+
+
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028373/fub8gji2mkmzhua7hmns.jpg" class="card-image"> <br />
+                    <h9>SIVA GANESH MANURI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028374/y2qsain6vqh8qfxtqsux.jpg" class="card-image"> <br />
+                    <h9>UNNIKIRAN JALADHI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028373/pylitu47xreac9sypidq.jpg" class="card-image"> <br />
+                    <h9>ANJANI YALAMANCHILI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028374/k65gscstzba2ra3pp0zo.jpg" class="card-image"> <br />
+                    <h9>T.USHA RANI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028375/kan2ohzsg3xbor6610sn.jpg" class="card-image"> <br />
+                    <h9>TIRUMANADHAM N S KOTI MANI KUMAR</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028377/w0xk2ajb2e8qfhrvirzb.jpg" class="card-image"> <br />
+                    <h9>CH.SRINIVAS</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028378/vjrxl4luxddmovehpdsm.jpg" class="card-image"> <br />
+                    <h9>JYOTHI YADLA</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028375/aps6e2uhmyeobwhiytya.jpg" class="card-image"> <br />
+                    <h9>P.CHAITANYA</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028385/o8o2rnmolytxkctxxfpi.jpg" class="card-image"> <br />
+                    <h9>VEGI VALLIGAYATHRI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028378/e8dh1oluzdqgptflwzxp.jpg" class="card-image"> <br />
+                    <h9>MADHAVA ROA MAGANTI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711028385/gjfmgqnqqimxy5b4hscg.jpg" class="card-image"> <br />
+                    <h9>MONIKADEVI GOTTIPALLI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711037341/WhatsApp_Image_2024-03-21_at_9.27.06_PM_bnnanq.jpg" class="card-image"> <br />
+                    <h9>KOTTURI SAI CHARMILA</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711037342/WhatsApp_Image_2024-03-21_at_9.28.30_PM_sjrw8i.jpg" class="card-image"> <br />
+                    <h9>MOHAMMAD HAZI MOINUDDIN BASHA</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711037342/WhatsApp_Image_2024-03-21_at_9.27.31_PM_upckai.jpg" class="card-image"> <br />
+                    <h9>G BINDU MADHAVI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711037342/WhatsApp_Image_2024-03-21_at_9.28.04_PM_euro7l.jpg" class="card-image"> <br />
+                    <h9>USHARANI RAMANOLLA</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711037342/WhatsApp_Image_2024-03-21_at_9.26.38_PM_agamye.jpg" class="card-image"> <br />
+                    <h9>KALAN KUMAR RAMISETTY</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711037342/WhatsApp_Image_2024-03-21_at_9.21.20_PM_djpxtx.jpg" class="card-image"> <br />
+                    <h9>SANKU LAKSHMI VIJETHA</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711037342/WhatsApp_Image_2024-03-21_at_9.26.16_PM_pn6mq3.jpg" class="card-image"> <br />
+                    <h9>N VENKATA PHANEESWAR</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711037342/WhatsApp_Image_2024-03-21_at_9.25.09_PM_pu0j3t.jpg" class="card-image"> <br />
+                    <h9>ANIL KUMAR PERMA</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711037342/WhatsApp_Image_2024-03-21_at_9.25.47_PM_hg8m2t.jpg" class="card-image"> <br />
+                    <h9>SRI DIVYA GANGIREDLA</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711037343/WhatsApp_Image_2024-03-21_at_9.20.49_PM_mnbyat.jpg" class="card-image"> <br />
+                    <h9>Dr. ADIMULAM YESU BABU</h9> <br />
+                    <h9>PROFESSOR & HEAD DEPARTMENT OF COMPUTER SCIENCE & Engg</h9>
+                </div>
+                <div class="f_card">
+                    <img src="https://res.cloudinary.com/dq2hudmbj/image/upload/v1711037343/WhatsApp_Image_2024-03-21_at_9.24.04_PM_yu4jp1.jpg" class="card-image"> <br />
+                    <h9>DURGASRAVANI BAAKI</h9> <br />
+                    <h9> ASSISTANT PROFESSOR</h9>
+                    <h6>M.Tech</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <button class="btn btn-secondary" onclick="display('sectionContent-card')">Back</button>
+
+
+
+    <div id="sectionCollege">
+        <div class="detailed-view-bg-container">
+            <h1 class="detailed-view-heading">Detailed View</h1>
+            <div class="detailed-view-card-container">
+                <div class="active-5">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3oh9qQWbAe0Typj5AuugE4nCLHCuAuj0WWg&usqp=CAU" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://sircrrengg.ac.in/images/home_slider/1a.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ0wPNaCpHbclsxWeX-xdVzz9LWKyz2LZEbA&usqp=CAU" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="detailed-view-card-text-container">
+                    <h1 class="detailed-view-card-heading">Sir Cr Reddy College of Engineering</h1>
+                    <p class="detailed-view-card-description">
+                    <ul>
+                        <li>
+                            Since its inception in 1989, Sir C.R.Reddy College of Engineering has been a premier institute for quality engineering education in Andhra Pradesh under the stewardship of its broad minded and magnanimous management.
+                            The last two and a half decades has seen the Institute fulfilling its motto of 'QUALITY SERVICE & VALUE BASED EDUCATION' to the student community.</li>
+                        <li>Adhering to its core values, the institute gives top priority to ethical values and high standards and a commitment to value based education.
+                            We believe in working honestly and sincerely, in building trust and in maintaining a long lasting relationship with the Society. Our team comprises of highly qualified and motivated faculty.</li>
+                        <li>It is easily accessible from any part of the country by rail as well as road.
+                            The College is located in its own sprawling campus with an area of 30.48 acres.
+                            Its magnanimous infrastructure and greenery attracts the attention of people who pass by.</li>
+                        <li>The vast green campus housing several Departments provides a stimulating environment to the high caliber staff and students of the institution.
+                            The Campus at Vatluru is a place where students from all walks of life are under a single umbrella pursuing their BE/B.Tech, M.Tech and MBA courses.</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="display('sectionContent-card')">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionCSE">
+        <div class="detailed-view-bg-container">
+            <h1 class="detailed-view-heading">Detailed View</h1>
+            <div class="detailed-view-card-container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3oh9qQWbAe0Typj5AuugE4nCLHCuAuj0WWg&usqp=CAU" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://sircrrengg.ac.in/images/home_slider/1a.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ0wPNaCpHbclsxWeX-xdVzz9LWKyz2LZEbA&usqp=CAU" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div class="detailed-view-card-text-container">
+                    <h1 class="detailed-view-card-heading">CSE Depatment</h1>
+                    <p class="detailed-view-card-description">
+                    <ul>
+                        <li> The Department of Computer Science & Engineering was established in the year 1989 along with the inception of college.
+                            The department is offering Under Graduate & Post Graduate programs in CSE & CST respectively. The intake for UG is 180 and for
+                            MTech CST are 18. From the academic year 2021-2022 B.Tech program in Artificial Intelligence and Data Science was introduced.
+                            Since the inception the department has regarded enormous growth over the time & met the challenges from the industry from the
+                            field of engineering & technical education. The management has provided all the necessary requirements for the department from
+                            time to time with the dynamic requirements of industry. The department has a teaching staff with PhD and has the distinction of
+                            having staff with MTech qualification only.
+                        </li>
+                        <li>The department has modern laboratories to serve the teaching and research needs of the students of the department. The department
+                            has procured required number of licenses for software's like Microsoft Desktop Education all language license/software assurance packs
+                            and also other software's like ORACLE, Rational Rose. In addition to these software's the department is encouraging its staff & students
+                            to use the freeware software's. The department is well equipped with more than 300 computers with state of the art latest configuration.
+                            The students can experience a great facility of a total networked environment. The department is using 10no's of high-end servers for fulfilling the requirements of the students.
+                        </li>
+                        <li>In central library of the college with a book capacity of about 45,000 books cater the needs of the students. In addition to the book
+                            collection, the central library provides the facility of e-books, print & e-journals, online lessons, video lessons for the benefit of students.
+                            In addition to the facilities provided by the central library the CSE department maintains a department library with a collection of 1500 books to
+                            substantiate the requirements of students. The department provides access to internet facility to its students with a bandwidth of 20mbps with which
+                            the students can enrich their professional skills.</li>
+
+                        <li>The students of the department are exposed to co-curricular and extra-curricular activities at the college level, inter college level & university level.
+                            The student association CLASIC- CRRs Lustrous And Surmounting Intellectuals of Computer Science provides a platform to the student of the CSE department to exhibit
+                            their academic, cultural, sports & other talents. Majority of the students of the department are members of the professional society CSI- "Computer Society of India"
+                            with which the students are exposed to various events conducted by the CSI at country level. In addition to the regular academic training the students of the department
+                            will be given training for GATE, GRE, CAT, TOEFL & other competitive examinations. The students will be given CRT training for placements that visit our campus for placements.
+                            Majority of eligible students will be either absorbed by MNC's for placement or may opt for higher education in India or abroad.</li>
+                    </ul>
+                    </p>
+                    <button class="btn btn-secondary" onclick="display('sectionstaff')">Cse Faculty</button>
+                    <button class="btn btn-secondary" onclick="display('sectionContent-card')">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="sectionLaboratoties">
+        <div class="detailed-view-bg-container">
+            <h1 class="detailed-view-heading">Detailed View</h1>
+            <div class="detailed-view-card-container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbRu4sRWnJGjRJewGQEaDAPOz37KKLPCgeoA&usqp=CAU" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://sircrrengg.ac.in/images/AA.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwYtiwJX5pUcQeCsgizXZEAFlOC43kGsYQOA&usqp=CAU" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div class="detailed-view-card-text-container">
+                    <h1 class="detailed-view-card-heading">Sir Cr Reddy Laboratories</h1>
+                    <p class="detailed-view-card-description">
+                    <ul>
+                        <li>Provide training and guidance to students and staff in I.T and Computers and in Technology. Provide an environment conducive for E-learning and research. Keep all the computer hardware and software and other items in good working condition.</li>
+                        <li>the Departmet has growth over time in technical education.The department has a teaching staff with PG qualification only.
+                            The Department labrorataries is well-resourced with the modern computer labs and infrastructure. The department is well equipped with more than 200 computers with state of the art latest configuration,
+                            a total networked environment.The Department also organizes Seminars,Workshops and Certificate Coureses to improve the technical skills of the students.</li>
+                        <li>Workshops typically involve hands-on activities, facilitation techniques, group discussions, simulations, and collaborative exercises, which allow participants to explore, ideate, and participate in achieving their desired outcomes.</li>
+                        <li>This laboratory has all the necessary equipment for preparation of samples and standards for various analyses of liquid and solid samples. The laboratory houses traditional equipment including glassware, fume hoods, a muffle furnace, centrifuge, aggregate mill, and ovens.</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="display('sectionContent-card')">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionLibrary">
+        <div class="detailed-view-bg-container">
+            <h1 class="detailed-view-heading">Detailed View</h1>
+            <div class="detailed-view-card-container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://sircrrengg.ac.in/images/SS.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnErzQQhQzYP-aU10FJZljIfZcVelC0JRbpA&usqp=CAU" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9GAyjBiVJnHxKrsi1ICDf3Tq7Rr3nWbAD0g&usqp=CAU" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div class="detailed-view-card-text-container">
+                    <h1 class="detailed-view-card-heading">Central Library</h1>
+                    <p class="detailed-view-card-description">
+                    <ul>
+                        <li> The Central Library is the significant feature of the college. It is constructed in the campus with a total built up area of 3,717 square meters at the cost of Rs 3 crores with all modern facilities.
+                            To the conventional library facilities with 286 seating capacity, digital library, discussion rooms, internet browsing centre and video conferencing hall with 120 seating capacity are added.
+                            At present the college library has about 52,548 volumes with 18,689 titles, and subscribes Springer Nature e- Journals Engineering Collection,
+                            Computer Science Collection & Business & Management Collection-- 123 Journals & 34 Magazines. It is being developed to meet the needs of the post graduate and doctoral candidates.</li>
+                        <li>The library has over 4648 volumes and 4216 titles in the reference section that supports the activities of the research and development wing of the college. Digital Library with media server- 30 systems and Internet facility is available in the library with 70 systems.
+                            The college library is fully automated. The software is developed by the students of this college.
+                            The main features of the library software are Bar code based circulation system, web based public on line catalogue, Provision for serials control and stock verification etc.</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="display('sectionContent-card')">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionPlacements">
+        <div class="detailed-view-bg-container">
+            <h1 class="detailed-view-heading">Detailed View</h1>
+            <div class="detailed-view-card-container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://sircrrengg.ac.in/images/home_slider/1d.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://sircrrengg.ac.in/images/home_slider/00001.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://sircrrengg.ac.in/images/home_slider/1c.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div class="detailed-view-card-text-container">
+                    <h1 class="detailed-view-card-heading">placements</h1>
+                    <p class="detailed-view-card-description">
+                    <ul>
+                        <li>
+                            Every year, more than 800 students are placed at top companies like TCS, Infosys, Wipro, and Capgemini.
+                            The highest package before one year was INR 23 Lacs from Walmart. And our college is the top college in Eluru for placements.
+                            It is very useful to join our college to get placed in good company. </li>
+                        <li> As our batch is not yet completed; but our senior batch students got almost 90% placements which is equal to the computer Science department.
+                            At some of the batches our branch got more than CSE department. The highest package on campus is 8 Lacs and average is 3.2 Lacs.
+                            Tcs wipro capgemini, Deloitte, etc. companies are hiring.</li>
+                        <li>The C.R. Reddy College is one of the better colleges in Eluru. The average package in college is INR 5 LPA to 6 LPA,
+                            maximum. In the EEE branch, a large number of students were passing out and getting good placements on campus. The internship
+                            programs were also conducted at this college; the top recruiting companies were Tata, Infosys, Wipro, and so on.</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="display('sectionContent-card')">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionHostel">
+        <div class="detailed-view-bg-container">
+            <h1 class="detailed-view-heading">Detailed View</h1>
+            <div class="detailed-view-card-container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://sircrrengg.ac.in/images/crr/girlshostel.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://sircrrengg.ac.in/images/IMG_0744.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgtBH1ACBP5kMqGQ97OaRYdyanCnphCgQadQ&usqp=CAU" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div class="detailed-view-card-text-container">
+                    <h1 class="detailed-view-card-heading">Hostel</h1>
+                    <p class="detailed-view-card-description">
+                    <ul>
+                        <li>Boys Hostel is established in the year 2006 to provide accommodation and mess facilities to students of Sir C R Reddy College of Engineering.
+                            The hostel accommodates 800 students. Each room is attached with separate Bathroom. The rooms are furnished with Cots, Fans, Tables, Chairs, and Shelves with Iron Doors.
+                            Washbasin with mirror and Mosquito nets to window frames are also furnished. Internet facility & Hygienic drinking water is available to the inmates of the hostel.
+                        <li>Kitchen with modern cocking
+                            facilities and spacious dining hall is provided for inmates. Reading room, Indoor sport facilities are provided to the hostel inmates. A/c, Non A/c Guest rooms for College Guests/visitors and
+                            Parent's room for visiting parents are available in the hostel.</li>
+                        <li>Co-operative store sports and medical facilities to the inmates are available in the college campus. A 24-hour security is available
+                            to the inmates of the hostel to protect the hostel property and to report incidents that require immediate attention to authorities.</li>
+                        <li>Girls Hostel is established in the year 2002 to provide accommodation and mess facilities to students of Sir C R Reddy College of Engineering. The hostel accommodates about 500 students. Each room is attached with separate Bathroom.</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="display('sectionContent-card')">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionFacilities">
+        <div class="detailed-view-bg-container">
+            <h1 class="detailed-view-heading">Detailed View</h1>
+            <div class="detailed-view-card-container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCJ1vW03m7fptIgTM4t7QotceqIR5Knqc6nw&s" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdsiG6hKUWeA_R3UNCxSiYrPFJHPAaVrrJBw&s" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAFgBD3KJ52zdAMBF52zUnTIUZqMrwk2LAXg&usqp=CAU" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div class="detailed-view-card-text-container">
+                    <h1 class="detailed-view-card-heading">Sir Cr Reddy College of Engineering</h1>
+                    <p class="detailed-view-card-description">
+                    <ul>
+                        <li>
+                            Public transport is available in abundance for daily commutation. However the management
+                            has provided adequate transport facilities to students as well as to staff to come to college from far off places.
+                            Buses ply regularly from places like Vijayawada and also from local points of Eluru.
+                        </li>
+                        <li>A fully furnished Canteen with an area of 36.83 X 15.87 mts area caters the needs of all students and staff. It provides good quality of food.
+                            The canteen offers food at reasonable price. This facility starts at morning 8'0 clock and remains open till the college is closed. </li>
+                        <li>The college is encouraging the outdoor sports activities amongst the students by providing the infrastructure, coaching facilities, and attendance concession. Large playing fields support a wide variety of games, such as Cricket, Volleyball, Football, Hockey and Tennis. Our Outdoor facilities include a court for Basketball, Volleyball, Handball, and Tennis.</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="display('sectionContent-card')">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>

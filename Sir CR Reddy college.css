@@ -1,0 +1,143 @@
+
+.bg-container {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4FjwJFPNiSrGBiOtKw96C7V9MPtzxDwHPLw&usqp=CAU");
+    height: 170vh;
+    background-size: cover;
+}
+
+.container {
+    background-color: #21bfaf;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.active {
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.active-1 {
+    text-align: center;
+}
+
+.text {
+    color: #f54242;
+    font-family: Monoton;
+    padding: 25px;
+    font-size: bold;
+}
+
+
+.text-1 {
+    color: #111414;
+    padding: 15px;
+    font-family: Bree Serif;
+}
+
+.text-2 {
+    color: #111414;
+    padding: 15px;
+    font-family: Lobster;
+}
+
+.active-2 {
+    background-color: #d4bc24;
+    color: #ffffff;
+    padding: 15px;
+    width: 120px;
+    height: 45px;
+    border-radius: 8px;
+}
+
+.bg-container-1 {
+    background-color: #dff0d8;
+    height: 250vh;
+    background-size: cover;
+}
+
+.heading {
+    color: #4432a8;
+    font-family: "Roboto";
+    font-size: 38px;
+    font-weight: bold;
+    padding: 24px;
+}
+
+.card-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 15px;
+}
+
+.card-heading {
+    color: #0f0e46;
+    font-family: "Roboto";
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.card-description {
+    color: #6c6b70;
+    font-family: "Roboto";
+    font-size: 13px;
+}
+
+.f_card {
+    background-color: #c1bbc7;
+    font-size: 16px;
+    width: 160px;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 12px;
+
+}
+
+.card-image {
+    width: 80px;
+    height: 100px;
+}
+
+.detailed-view-bg-container {
+    background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/seabg.png");
+    height: 200vh;
+    background-size: cover;
+}
+
+.detailed-view-heading {
+    color: white;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: bold;
+    padding: 24px;
+}
+
+.detailed-view-card-container {
+    background-color: white;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin: 24px;
+}
+
+.detailed-view-card-heading {
+    color: #0f0e46;
+    font-family: "Roboto";
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.detailed-view-card-description {
+    color: #6c6b70;
+    font-family: "Roboto";
+    font-size: 13px;
+}
+
+.detailed-view-card-text-container {
+    padding: 16px;
+}
+
+.active-5 {
+    text-align: center;
+}
